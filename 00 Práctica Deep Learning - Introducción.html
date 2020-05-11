@@ -13077,7 +13077,20 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Introducci&#243;n.">Introducci&#243;n.<a class="anchor-link" href="#Introducci&#243;n.">&#182;</a></h1><h2 id="&#191;Qu&#233;-es-el-Deep-Learning?">&#191;Qu&#233; es el Deep Learning?<a class="anchor-link" href="#&#191;Qu&#233;-es-el-Deep-Learning?">&#182;</a></h2><p>Según la <a href="https://es.wikipedia.org/wiki/Aprendizaje_profundo">Wikipedia</a>, el <em>Deep Learning</em> o <strong>aprendizaje profundo</strong> es un conjunto de algoritmos de aprendizaje automático que intenta modelar abstracciones de alto nivel en datos utilizando arquitecturas computacionales que admiten transformaciones no lineales múltiples e iterativas de datos expresados en forma matricial o tensorial.</p>
+<h1 id="Pr&#225;ctica-de-Deep-Learning">Pr&#225;ctica de Deep Learning<a class="anchor-link" href="#Pr&#225;ctica-de-Deep-Learning">&#182;</a></h1><h2 id="Organizaci&#243;n-de-la-pr&#225;ctica:">Organizaci&#243;n de la pr&#225;ctica:<a class="anchor-link" href="#Organizaci&#243;n-de-la-pr&#225;ctica:">&#182;</a></h2><p>Esta práctica consta de tres partes, cada una de ellas es un <em>notebook</em> de <code>jupyter</code>, o sea, un documento como el que estás visualizando en este momento. Las partes son las siguientes:</p>
+<ul>
+<li><strong>Parte 0: Introducción al Deep Learning</strong>. Es este <em>notebook</em>, preparatorio de la práctica mediante <strong>realización guiada</strong> en el que se tratarán:<ul>
+<li>Unas pinceladas a las matemáticas y la historia de las redes neuronales</li>
+<li>Información sobre qué es y cómo instalar el software necesario para esta práctica: la distribución de python 3 <a href="https://www.anaconda.com/distribution/">Anaconda</a>, la librería de computación tensorial <a href="https://pytorch.org/get-started/locally/">PyTorch</a> y la plataforma de notebooks <code>jupyter</code>. </li>
+<li>Una introducción a la computación matricial en python con <code>pytorch</code>, que en muchas cosas se parece a matlab. </li>
+</ul>
+</li>
+<li><strong>Parte 1: El Perceptrón Multicapa</strong>. En esta parte se introduce el perceptrón multicapa (<em>Multi-Layer Perceptron</em> o MLP), la red neuronal más básica que podemos construir. Se verán detalladamente las pautas a seguir para crear, entrenar y evaluar una red neuronal utilizando la librería <code>pytorch</code>. Será una <strong>realización guiada</strong>, sin problemas a resolver. </li>
+<li><strong>Parte 2: Redes Neuronales Convolucionales</strong>. Esta parte será la <strong>entregable</strong> de la práctica de redes. En ella veremos las redes neuronales convolucionales, que son la <strong>herramienta más potente</strong> que existe a día de hoy para el procesado de imagen. Se utilizan en coches autónomos, en la búsqueda de imágenes de google, diagnóstico de enfermedades, interpretación del lenguaje, y muchas más aplicaciones. Veremos las particularidades de estas redes y cómo se implementan cada una. La segunda parte de este <em>notebook</em> será el <strong>problema a resolver</strong>: crear y entrenar una red convolucional para la detección de dígitos escritos a mano. </li>
+</ul>
+<p>La realización será autoguiada individual, siguiendo los <em>notebooks</em> que se proveen. Adicionalmente, el martes 19 a las 19:00 haremos una videotutoría para resolver dudas que puedan surgir con esta práctica.</p>
+<h2 id="Evaluaci&#243;n-de-la-pr&#225;ctica">Evaluaci&#243;n de la pr&#225;ctica<a class="anchor-link" href="#Evaluaci&#243;n-de-la-pr&#225;ctica">&#182;</a></h2><p>La evaluación de esta práctica será mediante la <strong>entrega del notebook</strong> <em>Parte 2: Redes convolucionales</em> <strong>con los problemas planteados resueltos</strong>. Se entregará subiendo el fichero <code>*.ipynb</code>(cuaderno de jupyter) resuelto a través del campus virtual en la tarea especificada.</p>
+<h1 id="Parte-0:-Introducci&#243;n">Parte 0: Introducci&#243;n<a class="anchor-link" href="#Parte-0:-Introducci&#243;n">&#182;</a></h1><h2 id="&#191;Qu&#233;-es-el-Deep-Learning?">&#191;Qu&#233; es el Deep Learning?<a class="anchor-link" href="#&#191;Qu&#233;-es-el-Deep-Learning?">&#182;</a></h2><p>Según la <a href="https://es.wikipedia.org/wiki/Aprendizaje_profundo">Wikipedia</a>, el <em>Deep Learning</em> o <strong>aprendizaje profundo</strong> es un conjunto de algoritmos de aprendizaje automático que intenta modelar abstracciones de alto nivel en datos utilizando arquitecturas computacionales que admiten transformaciones no lineales múltiples e iterativas de datos expresados en forma matricial o tensorial.</p>
 <p>Esto se realiza mediante el uso de <a href="https://es.wikipedia.org/wiki/Red_neuronal_artificial">redes neuronales</a> de múltiples capas en una grandísima variedad de arquitecturas. Podéis ver una charla sobre <em>deep learning</em>, redes neuronales y diferentes arquitecturas en este canal de youtube:</p>
 
 </div>
@@ -13182,13 +13195,9 @@ div#notebook {
 <li>Lenguaje de programación <strong>Python 3</strong> (recomendada la distribución <a href="https://www.anaconda.com/distribution/">Anaconda</a>)</li>
 <li>Formato de archivos: <a href="https://jupyter.org">Jupyter notebook</a> </li>
 <li>Librería <a href="https://pytorch.org/get-started/locally/">PyTorch</a></li>
-<li>Bases de datos de imágenes:<ul>
-<li>MNIST handwritten digit database</li>
-<li>Berkeley Segmentation Dataset and Benchmark</li>
+<li>Bases de datos de imágenes MNIST handwritten digit database</li>
 </ul>
-</li>
-</ul>
-<p>En las siguientes secciones vermoes qué es y cómo se instalan dichos componentes.</p>
+<p>En las siguientes secciones veremos qué es y cómo se instalan dichos componentes.</p>
 
 </div>
 </div>
@@ -13204,7 +13213,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Distribuci&#243;n-Anaconda">Distribuci&#243;n Anaconda<a class="anchor-link" href="#Distribuci&#243;n-Anaconda">&#182;</a></h1><p><a href="https://www.anaconda.com/distribution/">Anaconda</a> es una distribución del lenguaje de programación Python, orientada a la ciencia e ingeniería. Dispone de numerosas librerías que facilitan el trabajo como <code>numpy</code> (computación con arrays), <code>scipy</code> (estadística y procesado de señal) o <code>scikit-learn</code> (machine learning), entre otras muchas, convirtiéndola en la mayor rival de Matlab. Ésto, unido a que es <strong>software libre</strong> han hecho que su popularidad se haya visto incrementada en los últimos años, llegando a ser el lenguaje de programación más popular, incluso por encima de Java:</p>
+<h1 id="Distribuci&#243;n-Anaconda">Distribuci&#243;n Anaconda<a class="anchor-link" href="#Distribuci&#243;n-Anaconda">&#182;</a></h1><p><a href="https://www.anaconda.com/distribution/">Anaconda</a> es una distribución del lenguaje de programación Python, orientada a la ciencia e ingeniería. Dispone de numerosas librerías que facilitan el trabajo como <code>numpy</code> (computación con arrays), <code>scipy</code> (estadística y procesado de señal) o <code>scikit-learn</code> (machine learning), entre otras muchas, convirtiéndola en la mayor <strong>rival de Matlab</strong>. Ésto, unido a que es <strong>software libre</strong> han hecho que su popularidad se haya visto incrementada en los últimos años, llegando a ser el lenguaje de programación más popular, incluso por encima de Java:</p>
 
 </div>
 </div>
@@ -13220,6 +13229,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Fijáos en como la popularidad de matlab decrece conforme aumenta la de python, porque están muy relacionadas.</p>
 <p>Para la instalación de Anaconda nos vamos a su <a href="https://www.anaconda.com/distribution/">página oficial</a> o directamente lo descargamos en su versión para:</p>
 <ul>
 <li>Windows <a href="https://repo.anaconda.com/archive/Anaconda3-2020.02-Windows-x86_64.exe">Descarga</a></li>
@@ -13392,14 +13402,36 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#191;C&#243;mo-funciona-pytorch?">&#191;C&#243;mo funciona pytorch?<a class="anchor-link" href="#&#191;C&#243;mo-funciona-pytorch?">&#182;</a></h2><p>Vamos a ver un tutorial rápido del tipo de datos de pytorch y cómo trabaja internamente esta librería.</p>
+<h2 id="&#191;C&#243;mo-funciona-pytorch?">&#191;C&#243;mo funciona pytorch?<a class="anchor-link" href="#&#191;C&#243;mo-funciona-pytorch?">&#182;</a></h2><p>Vamos a ver un tutorial rápido del tipo de datos de pytorch y cómo trabaja internamente esta librería. Para esto tendrás que haber seguido correctamente todos los pasos anteriores. Para esto necesitas la <strong>versión interactiva del notebook</strong>.</p>
 <p>Para esta sección:</p>
 <ul>
 <li><strong>Abre Jupyter</strong> (consultar arriba)</li>
 <li>Navega hasta el notebook <code>00 Práctica Deep Learning - Introducción.ipynb</code> y ábrelo.</li>
 <li>Baja hasta esta sección. </li>
 </ul>
-<p>Vamos a cargar la librería con <code>import torch</code> y ver que podemos, por ejemplo, construir una matriz de 5x3 aleatoria:</p>
+<h3 id="Algunas-diferencias-entre-Matlab-y-Python">Algunas diferencias entre Matlab y Python<a class="anchor-link" href="#Algunas-diferencias-entre-Matlab-y-Python">&#182;</a></h3><p>Pero antes de nada os cuento algunas diferencias entre matlab y python:</p>
+<ul>
+<li>Python es un <strong>lenguaje de propósito general</strong> mientras que matlab es un lenguaje <strong>específico para ciencia e ingeniería</strong>. Esto no es ni bueno ni malo; matlab es más fácil de utilizar para ingeniería sin preparación, pero python es más versátil. </li>
+<li>Debido a ello, <strong>Matlab carga automáticamente todas las funciones</strong> mientras que en Python, <strong>hay que cargar las librerías que vamos a utilizar</strong>. Esto hace que usar funciones en matlab sea más sencillo (dos letras menos que escribir), pero a costa de que es más difícil gestionar la memoria, y los nombres de funciones se puden superponer. Supon que <code>A</code> es una matriz. Para hacer la pseudoinversa, en matlab hacemos: </li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">pinv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+<ul>
+<li>en python tenemos que cargar la librería:<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="n">sp</span><span class="o">.</span><span class="n">pinv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</li>
+<li>Esto genera una cosa llamada <strong>espacio de nombres</strong>, en el que las funciones de cada librería van precedidas por su abreviatura (si importamos con <code>import x as y</code>) o el propio nombre si usamos <code>import torch</code>, <code>torch.tensor()</code>, mientras que en matlab basta con llamar a la función. Por ejemplo, cuando en matlab escribimos:<ul>
+<li><code>vector = [1, 2, 3]</code></li>
+</ul>
+</li>
+<li>en python+pytorch necesitamos especificar que es un tensor (un array multidimensional):<ul>
+<li><code>vector = torch.tensor([1,2,3])</code></li>
+</ul>
+</li>
+</ul>
+<p>Hay más diferencias, pero la idea de cargar librerías y el espacio de nombres suelen ser las más complejas para los principiantes.</p>
+<h3 id="Realizaci&#243;n-guiada">Realizaci&#243;n guiada<a class="anchor-link" href="#Realizaci&#243;n-guiada">&#182;</a></h3><p>Vamos a cargar la librería con <code>import torch</code> y ver que podemos, por ejemplo, construir una matriz de 5x3 aleatoria. Para ejecutar una celda, basta con seleccionarla (bien con las flechas del teclado, bien con el ratón) y pulsando <code>Ctrl+Enter</code> (o bien pulsando "Run" en la barra superior).</p>
 
 </div>
 </div>
